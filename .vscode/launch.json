@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:MacMan}",
+            "name": "Debug MacMan",
+            "target": "MacMan",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug MacMan"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:MacMan}",
+            "name": "Release MacMan",
+            "target": "MacMan",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release MacMan"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+
+[commands]
+test = '''
+what
+'''
+
+test2='''
+wikipedia
+line2
+line3
+'''
