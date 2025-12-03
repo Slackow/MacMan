@@ -1,11 +1,171 @@
 
-[commands]
-test = '''
-what
-'''
+[commands.slackowwalllog]
+description="Describes how to send a SlackowWallLog"
+message="""
+To send a log from SlackowWall:
+- Make sure your game is open
+- Open SlackowWall Settings
+- Look under the "Credits & Help" tab
+- Press the button/link towards the bottom of the page.
 
-test2='''
-wikipedia
-line2
-line3
-'''
+Your log file contains specs, SlackowWall settings, and NinjabrainBot settings, \
+as well as the mods you use, and any errors that may have occurred.
+"""
+
+[commands.fn_f3]
+description="Describes how to remove the requirement for pressing fn with f3"
+message="""
+In order to `f3 + c`, you cannot press `fn + f3 + c`, because `fn + c` is bound \
+to opening the control center. You can override this in a number of ways:
+- Turning on the macOS setting under `Keyboard > Keyboard Shortcuts... > Function Keys`
+- Using [Karabiner Elements](<https://karabiner-elements.pqrs.org/>), which is trickier \
+to setup but allows for more advanced rebinding options
+- Using [Fluor](<https://fluorapp.net/>), which simply changes the function row between \
+function keys and action keys, depending on the app you're in. (Easier to setup)
+If you have a touchbar instead of physical keys, \
+follow the instructions under `/fn_f3_touchbar` instead
+"""
+
+[commands.fn_f3_touchbar]
+description="Describes how to remove the requirement for pressing fn with f3 with a touchbar"
+message="""
+If you have a touchbar, you can do the following to show the function row while you're in Minecraft:
+
+- Open the "Terminal" app
+- Copy, paste and run this command (`⌘ + v, return/enter`)
+```sh
+defaults write com.apple.touchbar.agent PresentationModePerApp -dict-add net.java.openjdk.cmd functionKeys \
+net.java.openjdk.java functionKeys com.azul.zulu.java functionKeys
+sudo killall TouchBarServer NowPlayingTouchUI ControlStrip
+```
+you may be prompted for your password
+"""
+
+[commands.blankprojector]
+description="Describes how to fix a blank eye projector in SlackowWall"
+message="""
+A blank eye projector is usually caused by using retiNO mod, not using the BoundlessWindow mod, \
+or not having Screen Recording permissions.
+
+Ensure you've done the following:
+- Disabled/not using retiNO mod
+- Are using the [BoundlessWindow mod](<https://github.com/Slackow/BoundlessWindow/releases/latest>)
+- Have the "Remove Titlebar" option on in BoundlessWindow settings
+- Have Screen Recording permissions enabled for SlackowWall
+
+If you previously set your tall height to `16384`, remove this override and allow it to default.
+(You should still use `16384` in Ninjabrain Bot, because your Minecraft resolution is different from your window size)
+
+For more details and alternatives to retiNO mod, read this \
+[document](<https://docs.google.com/document/d/1gD_ZZYFCEOJxImyfpUxLHGn702moP9I69-46fhWe9QM/edit?usp=sharing>)
+
+If you still have a blank eye projector, send a SlackowWall log file and tag Slackow.
+instructions for that can be found under `/slackowwalllog`
+"""
+
+[commands.macman]
+description="Describes the Mac Man bot"
+message="""
+Yo, I'm Mac Man, created by Slackow.
+Most of my commands just relay information about common issues or troubleshooting guides on macOS, \
+related to speedrunning.
+
+I was made in Swift and am either hosted on a Mac Mini or an Oracle server running Linux.
+(mostly to stick with the Mac theme, Python or Typescript is more suitable for a bot this simple)
+Here's my [source code](<https://github.com/Slackow/MacMan>)
+Have a Mac wonderful day!
+"""
+
+[commands.boateye]
+description="Describes how to setup SlackowWall"
+message="""
+# To setup BoatEye on macOS
+- Download and install [SlackowWall](<https://github.com/Slackow/SlackowWall>), and [NinjabrainBot](<https://github.com/Ninjabrain1/Ninjabrain-Bot>)
+- Grant SlackowWall the necessary permissions (screen recording & accessibility)
+- Grant NinjabrainBot the necessary permissions (accessibility)
+- If not on macOS Sequoia (15) make sure you are *not* using the retiNO mod, and that you do have the [Boundless Window mod](<https://github.com/Slackow/BoundlessWindow/releases/latest>)
+- With BoundlessWindow, Minecraft will go onto your "Main display" so you may have to change that in display settings if you use an external display.
+- Make sure you have "Video Settings... > Fullscreen" off
+# In SlackowWall:
+- Enter settings, and go under Window Resizing to configure your hotkey for tall mode, and other modes you may use.
+- Under Utility Settings, enable Eye Projector, and Sensitivity Scaling.
+- Set the Simulated Sensitivity slider to the sensitivity you use in game
+- Make sure BoatEye sensitivity is set to `0.02291165`
+- With your game open, press the red x that appears next to BoatEye sensitivity
+This should set your in-game sensitivity to the BoatEye sensitivity (~4%).
+You should not change your in-game sensitivity. (change the slider instead)
+Sensitivity Scaling makes your in-game sens feel like your normal sens, it only works *while SlackowWall is open*. \
+You can use the toolbar icon or hotkey to toggle it on/off easier, and by default it will slow down your mouse in tall mode.
+
+run `/boateye_ninbot` for instructions on setting up NinjabrainBot
+run `/boateye_obs` for instructions on changing OBS
+run `/eyemeasuring` for instructions on measuring
+"""
+
+[commands.boateye_ninbot]
+description="Describes how to setup Ninjabrain Bot for BoatEye"
+message="""
+# In NinjabrainBot:
+- Enter Settings, go under Hotkeys (it may appear blank the first time)
+- Configure the hotkeys for "Reset" and adjusting your angle +/-0.01, be mindful that the first one is +
+- Go under "Optional features > Boat measurement"
+- Set "Sensitivity 1.13+" to `0.02291165`
+- Set "Default boat mode" to `Green boat`
+- Set Standard deviation for boat throws to `0.0007`
+- Go under "Angle adjustment"
+- Set "Adjustment display type" to `Number of adjustments`
+- Set "Pixel adjustment type" to `Tall resolution`
+- Set "Resolution height" to `16384`
+- Restart NinjabrainBot
+- Press your "Reset" hotkey (your boat should turn green)
+
+run `/boateye` for instructions on setting up SlackowWall if you haven't already
+run `/boateye_obs` for instructions on changing OBS
+run `/eyemeasuring` for instructions on measuring
+You should be setup. (You don't need to calibrate NinjabrainBot if you use BoatEye)
+"""
+
+[commands.boateye_obs]
+description="Describes how to setup your Minecraft source in OBS"
+message="""
+For your game to show up properly in OBS:
+- Create/reuse a macOS screen capture, and set it to `Window Capture`
+- Select your game as the window (you can type "[j" in the dropdown to find it immediately)
+- Press "Ok", then press `⌘ + E` on the source
+- Set "Bounding Box Type" to `Scale to inner bounds`
+- Set "Alignment in Bounding Box" to `Center`
+- Set "Bounding Box Size" to your output resolution, e.g. `1920 x 1080`
+- Press "Close"
+- Optionally add an image source for NinjabrainBot, the path should appear in NinjabrainBot \
+under the "OBS overlay" section. You can use the `⌘ + ⇧ + g` shortcut in finder to make typing in the path easier
+You should see that in tall mode, your game will not be cut off.
+You will have to reselect the window every time you restart your game
+"""
+
+[commands.eyemeasuring]
+description="Describes how to measure your eye"
+message="""
+For when you have green boat and a sensitivity of `0.02291165`:
+make sure you have followed all steps in `/boateye`
+- If and only if you entered a boat during the run, and pressed a and d while in it: make sure you have entered and left a boat before measuring. \
+(You do not have to record the angle, simply enter and leave it without pressing a/d, at any point before measuring.)
+- Throw your eye, making sure your server/client positions are not [desynced](<https://www.youtube.com/watch?v=uBqAeZMlEFQ>)
+- Line your mouse up to the eye, and enter 30 FOV.
+- Press your tall mode hotkey.
+- Move your mouse even closer to the boundary between the center of the eye[,]\
+(https://raw.githubusercontent.com/Slackow/SlackowWall/main/Info/images/eyeProjector.png) \
+and pause buffer if necessary (pausing while holding f3)
+- Once you see the intersection between the middle and left pixels on your eye projector, do not move your mouse, and press `f3 + c`.
+- Then enter the input as it reads on the eye projector, right side is +, left side is -.
+- The result should then (hopefully) be accurate
+"""
+
+[commands.f3_c]
+description="Describes why f3+c may not be working"
+message="""
+If f3 + c isn't working, make sure:
+- NinjabrainBot has accessibility permissions granted
+- You have the setting under "Advanced > Alternative Clipboard Reader" off
+If you are not seeing "Location copied to clipboard" when pressing `f3 + c`, and you're pressing \
+`fn + f3 + c`, consult `/fn_f3`
+"""

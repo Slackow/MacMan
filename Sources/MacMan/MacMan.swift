@@ -5,28 +5,38 @@ import TOMLDecoder
 @main
 @MainActor
 struct MacMan {
-    static let config = try! TOMLDecoder().decode(
+    static var config = try! TOMLDecoder().decode(
         Config.self, from: Data(PackageResources.config_toml))
-    static func main() async {
-        let commands = config.commands.map { key, value in
-            Payloads.ApplicationCommandCreate(
-                name: key,
-                description: "the \(key) command",
-                options: [],
+    static func main() async throws {
+        // dummy entry so commands recognizes itself
+        config.commands["commands"] = CommandValue(description: "a", message: "b")
+        config.commands["commands"] = CommandValue(
+            description: "Outputs a list of commands",
+            message: """
+                Available commands include:
+                ```
+                \(config.commands.keys.grouped {String($0.first ?? "a")} .map{"- [\($0.uppercased())] \($1.sorted().map{"/\($0)"}.joined(separator: ", "))"}.sorted().joined(separator: "\n"))
+                ```
+                """)
+        let commands = try config.commands.map { name, command in
+            guard command.message.trim().count <= 1975 else { throw MacManError.invalidInput }
+            return Payloads.ApplicationCommandCreate(
+                name: name,
+                description: command.description.isEmpty
+                    ? "the \(name) command" : command.description,
+                // options: [.init(type: .user, name: "tag", description: "user to tag with response", required: false)],
             )
         }
 
         let bot = await BotGatewayManager(
-            token: ProcessInfo.processInfo.environment["TOKEN"]!.trimmingCharacters(
-                in: .whitespacesAndNewlines),
+            token: ProcessInfo.processInfo.environment["TOKEN"]!.trim(),
             intents: Gateway.Intent.unprivileged
         )
 
         print("Logging in...")
         await bot.connect()
         print("Logged in")
-        print(config.commands)
-        try! await bot.client.bulkSetApplicationCommands(payload: commands).guardSuccess()
+        try await bot.client.bulkSetApplicationCommands(payload: commands).guardSuccess()
         await withTaskGroup(of: Void.self) { taskGroup in
             taskGroup.addTask {
                 for await event in await bot.events {
@@ -53,30 +63,10 @@ struct EventHandler: GatewayEventHandler {
             try await client.updateOriginalInteractionResponse(
                 token: interaction.token,
                 payload: Payloads.EditWebhookMessage(
-                    content: "Hello, You wanted me to echo something!",
-                    embeds: [
-                        Embed(
-                            title: "This is an embed",
-                            description: MacMan.config.commands[command.name],
-                            timestamp: Date(),
-                            color: .init(value: .random(in: 0..<(1 << 24))),
-                            footer: .init(text: "Footer!"),
-                            author: .init(name: "Authored by DiscordBM!"),
-                            fields: [
-                                .init(name: "field name!", value: "field value!")
-                            ]
-                        )
-                    ],
-                    components: [
-                        [
-                            .button(
-                                .init(
-                                    label: "Open Slackow.com!",
-                                    url: "https://slackow.com"
-                                ))
-                        ]
-                    ]
-                )
+                    content: MacMan.config.commands[command.name]?.message.trim(),
+                    embeds: [],
+                    components: [],
+                ),
             ).guardSuccess()
         default:
             break
@@ -85,5 +75,20 @@ struct EventHandler: GatewayEventHandler {
 }
 
 struct Config: Decodable {
-    let commands: [String: String]
+    var commands: [String: CommandValue]
+}
+
+struct CommandValue: Decodable {
+    let description: String
+    let message: String
+}
+
+extension String {
+    fileprivate func trim() -> String {
+        self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}
+
+enum MacManError: Error {
+    case invalidInput
 }
