@@ -13,9 +13,9 @@ as well as the mods you use, and any errors that may have occurred.
 """
 
 [commands.fn_f3]
-description="Describes how to remove the requirement for pressing fn with f3"
+description="Describes how to remove the requirement for pressing fn with F3"
 message="""
-In order to `f3 + c`, you cannot press `fn + f3 + c`, because `fn + c` is bound \
+In order to `F3 + C`, you cannot press `fn + F3 + C`, because `fn + C` is bound \
 to opening the control center. You can override this in a number of ways:
 - Turning on the macOS setting under `Keyboard > Keyboard Shortcuts... > Function Keys`
 - Using [Karabiner Elements](<https://karabiner-elements.pqrs.org/>), which is trickier \
@@ -27,12 +27,12 @@ follow the instructions under `/fn_f3_touchbar` instead
 """
 
 [commands.fn_f3_touchbar]
-description="Describes how to remove the requirement for pressing fn with f3 with a touchbar"
+description="Describes how to remove the requirement for pressing fn with F3 with a touchbar"
 message="""
 If you have a touchbar, you can do the following to show the function row while you're in Minecraft:
 
 - Open the "Terminal" app
-- Copy, paste and run this command (`⌘ + v, return/enter`)
+- Copy, paste and run this command (`⌘ + V, return/enter`)
 ```sh
 defaults write com.apple.touchbar.agent PresentationModePerApp -dict-add net.java.openjdk.cmd functionKeys \
 net.java.openjdk.java functionKeys com.azul.zulu.java functionKeys
@@ -137,7 +137,7 @@ For your game to show up properly in OBS:
 - Set "Bounding Box Size" to your output resolution, e.g. `1920 x 1080`
 - Press "Close"
 - Optionally add an image source for NinjabrainBot, the path should appear in NinjabrainBot \
-under the "OBS overlay" section. You can use the `⌘ + ⇧ + g` shortcut in finder to make typing in the path easier
+under the "OBS overlay" section. You can use the `⌘ + ⇧ + G` shortcut in finder to make typing in the path easier
 You should see that in tall mode, your game will not be cut off.
 You will have to reselect the window every time you restart your game
 """
@@ -168,4 +168,29 @@ If f3 + c isn't working, make sure:
 - You have the setting under "Advanced > Alternative Clipboard Reader" off
 If you are not seeing "Location copied to clipboard" when pressing `f3 + c`, and you're pressing \
 `fn + f3 + c`, consult `/fn_f3`
+"""
+
+[commands.command_q]
+description="Describes how to unbind command + q for Minecraft"
+message="""
+You can unbind `⌘ + Q` for Minecraft specifically, so that you can use it to drop a full stack of items[.](https://cdn.discordapp.com/attachments/1115090281453322402/1430669408920932452/image.png?ex=6932a5f7&is=69315477&hm=dd152ef42617d60b0aab17b8da4d7e596d8bef554e43ff2d4c9928cec1b21c68&)
+The setting is under "Keyboard > Keyboard Shortcuts... > App Shortcuts", where you can add a shortcut called \
+"Quit java" (Case Sensitive) and set it to whatever you like (e.g. `^ + ⌥ + Q`)
+Older versions may require specialized names (<1.13)
+"""
+
+[commands.update_mods]
+description="Describes how to update your mods"
+message="""
+You can update your mods through [SlackowWall](<https://github.com/Slackow/SlackowWall>) or [ModCheck](<https://github.com/tildejustin/modcheck>)
+If you have SlackowWall, just make sure you are in utility mode, and click the arrow in the top right of your instance.
+Then click the "View Mods" option, and in that menu, press the button the update your mods. (This will close your game)
+"""
+
+[commands.clear_worlds]
+description="Describes how to clear your worlds"
+message="""
+In SlackowWall's Utility mode, there's an option called "Clear Worlds" underneath the arrow in the top right corner. \
+This will delete all but the 30 most recent worlds created with names like "New World, Random Speedrun etc." \
+Personal worlds and maps should be safe as long as their **Folders** do not have these names.
 """
