@@ -194,3 +194,22 @@ In SlackowWall's Utility mode, there's an option called "Clear Worlds" underneat
 This will delete all but the 30 most recent worlds created with names like "New World, Random Speedrun etc." \
 Personal worlds and maps should be safe as long as their **Folders** do not have these names.
 """
+
+[commands.multimc_to_prism]
+description="Explains the significance of Prism vs MultiMC for macOS"
+message="""
+If you are using a Mac made after 2020, with an M series chip (e.g. M1, M2, etc) \
+then you should be using PrismLauncher instead of MultiMC.
+This is because MultiMC only supports Intel Chips, while PrismLauncher supports ARM (apple chips) and Intel. \
+In practice, this means if you are using MultiMC, you are running an Intel Version of Java through a translation layer that makes it work on ARM. \
+This drastically reduces performance.
+
+Prism is based on MultiMC and has many similar features, in fact, migrating to Prism is usually as simple as moving your instances from one folder to another. \
+(usually the contents of `~/Library/Application Support/MultiMC/instances` to `~/Library/Application Support/PrismLauncher/instances`)
+
+You can migrate by running this command in your terminal, once you've installed [PrismLauncher](https://prismlauncher.org/). \
+Make sure both MultiMC and PrismLauncher are closed when you run this:
+```bash
+mv ~/Library/"Application Support"/MultiMC/instances/* ~/Library/"Application Support"/PrismLauncher/instances
+```
+"""
