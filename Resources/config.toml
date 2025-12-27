@@ -205,11 +205,11 @@ In practice, this means if you are using MultiMC, you are running an Intel Versi
 This drastically reduces performance.
 
 Prism is based on MultiMC and has many similar features, in fact, migrating to Prism is usually as simple as moving your instances from one folder to another. \
-(usually the contents of `~/Library/Application Support/MultiMC/instances` to `~/Library/Application Support/PrismLauncher/instances`)
+(usually the contents of `/Applications/MultiMC.app/Data/instances` to `~/Library/Application Support/PrismLauncher/instances`)
 
 You can migrate by running this command in your terminal, once you've installed [PrismLauncher](https://prismlauncher.org/). \
 Make sure both MultiMC and PrismLauncher are closed when you run this:
 ```bash
-mv ~/Library/"Application Support"/MultiMC/instances/* ~/Library/"Application Support"/PrismLauncher/instances
+mv /Applications/MultiMC.app/Data/instances/* ~/Library/"Application Support"/PrismLauncher/instances
 ```
 """
