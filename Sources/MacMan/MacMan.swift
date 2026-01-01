@@ -15,7 +15,7 @@ struct MacMan {
             message: """
                 Available commands include:
                 ```
-                \(config.commands.keys.grouped {String($0.first ?? "a")} .map{"- [\($0.uppercased())] \($1.sorted().map{"/\($0)"}.joined(separator: ", "))"}.sorted().joined(separator: "\n"))
+                \(config.commands.keys.grouped {String($0.first ?? "a")} .map{"[\($0.uppercased())] \($1.sorted().map{"/\($0)"}.joined(separator: ", "))"}.sorted().joined(separator: "\n"))
                 ```
                 """)
         let commands = try config.commands.map { name, command in

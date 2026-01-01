@@ -52,15 +52,33 @@ Ensure you've done the following:
 - Are using the [BoundlessWindow mod](<https://github.com/Slackow/BoundlessWindow/releases/latest>)
 - Have the "Remove Titlebar" option on in BoundlessWindow settings
 - Have Screen Recording permissions enabled for SlackowWall
-
-If you previously set your tall height to `16384`, remove this override and allow it to default.
-(You should still use `16384` in Ninjabrain Bot, because your Minecraft resolution is different from your window size)
+- If you previously set your tall height to `16384`, remove this override and allow it to default. (otherwise you may crash)
+  (You should still use `16384` in Ninjabrain Bot, because your Minecraft resolution is different from your window size)
 
 For more details and alternatives to retiNO mod, read this \
 [document](<https://docs.google.com/document/d/1gD_ZZYFCEOJxImyfpUxLHGn702moP9I69-46fhWe9QM/edit?usp=sharing>)
 
 If you still have a blank eye projector, send a SlackowWall log file and tag Slackow.
 instructions for that can be found under `/slackowwalllog`
+"""
+
+[commands.sensitivity_scaling]
+description="Describes what sensitivity scaling is"
+message="""
+BoatEye requires using specific sensitivities, and the sensitivities that work really well are \
+all small, (the most common of `0.02291165` is ~4%). Sensitivity Scaling allows you to translate your \
+"locked" mouse speed without affecting your regular mouse speed. So in practice you keep your minecraft sensitivity the same \
+(`0.02291165`) and change the slider in SlackowWall instead. (You can also type in an exact value by clicking the text)
+
+Note that this affects your mouse whenever it's locked, that's why there's convenient ways to toggle it, such as \
+the toolbar icon, and the global hotkey if you need to quickly toggle it but are mid match.
+
+It's also used to slow down your mouse when measuring eyes.
+BoatEye is only impacted by the in-game sensitivity value, so other stuff like scaling, or \
+mouse dpi/system sensitivity have no impact on measurements.
+
+If you press the red x next to "BoatEye Sensitivity", it will automatically change the sensitivity for you. \
+(Shows up with your game open)
 """
 
 [commands.macman]
