@@ -52,7 +52,7 @@ Ensure you've done the following:
 - Are using the [BoundlessWindow mod](<https://github.com/Slackow/BoundlessWindow/releases/latest>)
 - Have the "Remove Titlebar" option on in BoundlessWindow settings
 - Have Screen Recording permissions enabled for SlackowWall
-- If you previously set your tall height to `16384`, remove this override and allow it to default. (otherwise you may crash)
+- If you previously set your tall height to `16384`, remove this override and allow it to default to avoid a crash.
   (You should still use `16384` in Ninjabrain Bot, because your Minecraft resolution is different from your window size)
 
 For more details and alternatives to retiNO mod, read this \
