@@ -73,7 +73,7 @@ struct EventHandler: GatewayEventHandler {
             try await client.updateOriginalInteractionResponse(
                 token: interaction.token,
                 payload: Payloads.EditWebhookMessage(
-                    content: MacMan.config.commands[command.name]?.message.trim(),
+                    content: MacMan.config.commands[command.name]?.message.trim() ?? "<blank>",
                     embeds: [],
                     components: [],
                 ),
