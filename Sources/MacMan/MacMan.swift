@@ -74,7 +74,7 @@ struct EventHandler: GatewayEventHandler {
             try await client.updateOriginalInteractionResponse(
                 token: interaction.token,
                 payload: Payloads.EditWebhookMessage(
-                    content: "hi \(interaction.member?.user?.global_name ?? "")",
+                    content: "hi \(interaction.member?.user?.global_name ?? "")".lowercased(),
                     embeds: [],
                     components: [],
                 ),
