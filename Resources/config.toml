@@ -81,6 +81,17 @@ If you press the red x next to "BoatEye Sensitivity", it will automatically chan
 (Shows up with your game open)
 """
 
+[commands.tall_mode_crash]
+description="Describes the likely cause of a crash when entering tall mode"
+message="""
+If you manually set your tall mode height to 16384, you might experience a crash when resizing. \
+This is due to the difference between window size and minecraft resolution.
+
+Your game is resizing to a minecraft resolution height of 32768 (double 16384), which crashes the game. \
+If you remove the Tall mode height setting, that should resolve the crash. \
+NinjabrainBot should still be set to use 16384, because it only cares about your minecraft resolution. Read the document for more info[.](https://docs.google.com/document/d/1gD_ZZYFCEOJxImyfpUxLHGn702moP9I69-46fhWe9QM/edit?tab=t.0#heading=h.q72fbwoqngrh)
+"""
+
 [commands.macman]
 description="Describes the Mac Man bot"
 message="""
@@ -222,12 +233,5 @@ This is because MultiMC only supports Intel Chips, while PrismLauncher supports 
 In practice, this means if you are using MultiMC, you are running an Intel Version of Java through a translation layer that makes it work on ARM. \
 This drastically reduces performance.
 
-Prism is based on MultiMC and has many similar features, in fact, migrating to Prism is usually as simple as moving your instances from one folder to another. \
-(usually the contents of `/Applications/MultiMC.app/Data/instances` to `~/Library/Application Support/PrismLauncher/instances`)
-
-You can migrate by running this command in your terminal, once you've installed [PrismLauncher](https://prismlauncher.org/). \
-Make sure both MultiMC and PrismLauncher are closed when you run this:
-```bash
-mv /Applications/MultiMC.app/Data/instances/* ~/Library/"Application Support"/PrismLauncher/instances
-```
+Prism is directly based on MultiMC and has all of its features (and more). In fact, migrating to Prism is usually as simple as copying or moving your instances from one folder to another[.](https://prismlauncher.org/wiki/getting-started/migrating-multimc/)
 """

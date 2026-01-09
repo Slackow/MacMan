@@ -8,6 +8,7 @@ struct MacMan {
     static var config = try! TOMLDecoder().decode(
         Config.self, from: Data(PackageResources.config_toml))
     static func main() async throws {
+        config.commands["yo_macman"] = CommandValue(description: "Say yo to MacMan!", message: "b")
         // dummy entry so commands recognizes itself
         config.commands["commands"] = CommandValue(description: "a", message: "b")
         config.commands["commands"] = CommandValue(
@@ -59,6 +60,15 @@ struct EventHandler: GatewayEventHandler {
         ).guardSuccess()
 
         switch interaction.data {
+        case .applicationCommand(let c) where c.name == "yo_macman":
+            try await client.updateOriginalInteractionResponse(
+                token: interaction.token,
+                payload: Payloads.EditWebhookMessage(
+                    content: "Yo, \(interaction.member?.user?.global_name ?? "")! :)",
+                    embeds: [],
+                    components: [],
+                ),
+            ).guardSuccess()
         case .applicationCommand(let command):
             try await client.updateOriginalInteractionResponse(
                 token: interaction.token,
