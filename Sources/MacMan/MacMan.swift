@@ -69,6 +69,15 @@ struct EventHandler: GatewayEventHandler {
                     components: [],
                 ),
             ).guardSuccess()
+        case .applicationCommand(let c) where c.name == "hi_macman":
+            try await client.updateOriginalInteractionResponse(
+                token: interaction.token,
+                payload: Payloads.EditWebhookMessage(
+                    content: "hi \(interaction.member?.user?.global_name ?? "")",
+                    embeds: [],
+                    components: [],
+                ),
+            ).guardSuccess()
         case .applicationCommand(let command):
             try await client.updateOriginalInteractionResponse(
                 token: interaction.token,
