@@ -9,6 +9,7 @@ struct MacMan {
         Config.self, from: Data(PackageResources.config_toml))
     static func main() async throws {
         config.commands["yo_macman"] = CommandValue(description: "Say yo to MacMan!", message: "b")
+        config.commands["hi_macman"] = CommandValue(description: "Say hi to MacMan!", message: "b")
         // dummy entry so commands recognizes itself
         config.commands["commands"] = CommandValue(description: "a", message: "b")
         config.commands["commands"] = CommandValue(
