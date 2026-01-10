@@ -87,8 +87,10 @@ message="""
 If you manually set your tall mode height to 16384, you might experience a crash when resizing. \
 This is due to the difference between window size and minecraft resolution.
 
-Your game is resizing to a minecraft resolution height of 32768 (double 16384), which crashes the game. \
-If you remove the Tall mode height setting, that should resolve the crash. \
+On some screens the minecraft resolution is double the window size, and on others it matches it (HiDPI vs LoDPI). \
+So the game is resizing to a minecraft resolution height of 32768 (double 16384), which crashes.
+
+If you remove the tall mode height setting, that should resolve the crash (SlackowWall figures out what you need). \
 NinjabrainBot should still be set to use 16384, because it only cares about your minecraft resolution. Read the document for more info[.](https://docs.google.com/document/d/1gD_ZZYFCEOJxImyfpUxLHGn702moP9I69-46fhWe9QM/edit?tab=t.0#heading=h.q72fbwoqngrh)
 """
 
@@ -100,7 +102,7 @@ Most of my commands just relay information about common issues or troubleshootin
 related to speedrunning.
 
 I was made in Swift and am either hosted on a Mac Mini or an Oracle server running Linux.
-(mostly to stick with the Mac theme, Python or Typescript is more suitable for a bot this simple)
+(mostly to stick with the Mac theme, Python or TypeScript is more suitable for a bot this simple)
 Here's my [source code](<https://github.com/Slackow/MacMan>)
 Have a Mac wonderful day!
 """
@@ -234,4 +236,26 @@ In practice, this means if you are using MultiMC, you are running an Intel Versi
 This drastically reduces performance.
 
 Prism is directly based on MultiMC and has all of its features (and more). In fact, migrating to Prism is usually as simple as copying or moving your instances from one folder to another[.](https://prismlauncher.org/wiki/getting-started/migrating-multimc/)
+"""
+
+[commands.slackowwall]
+description="Gets the download link to SlackowWall"
+message="""
+Download SlackowWall from [GitHub](https://github.com/Slackow/SlackowWall/releases/latest)
+
+If you have [Homebrew](https://brew.sh) you can run this:
+```bash
+brew install slackow/apps/slackowwall
+```
+"""
+
+[commands.boundless_window]
+description="Links to boundless window mod"
+message="""
+Download BoundlessWindow from [GitHub](<https://github.com/Slackow/BoundlessWindow/releases/latest>), \
+[ModCheck](<https://github.com/tildejustin/modcheck/releases/latest>), or \
+[mods.tildejustin.dev](<https://mods.tildejustin.dev>)
+
+BoundlessWindow allows you to resize your minecraft window larger than your monitor height, \
+which it is normally limited to.
 """
