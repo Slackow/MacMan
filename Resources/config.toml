@@ -242,11 +242,11 @@ Prism is directly based on MultiMC and has all of its features (and more). In fa
 description="Gets the download link to SlackowWall"
 message="""
 Download SlackowWall from [GitHub](<https://github.com/Slackow/SlackowWall/releases/latest>)
-
 If you have [Homebrew](<https://brew.sh>) you can run this:
 ```bash
 brew install slackow/apps/slackowwall
 ```
+SlackowWall is an MCSR utility app, similar to Jingle/Julti but for macOS.
 """
 
 [commands.boundless_window]
