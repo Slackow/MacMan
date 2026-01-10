@@ -1,6 +1,6 @@
 
-[commands.slackowwalllog]
-description="Describes how to send a SlackowWallLog"
+[commands.swlog]
+description="Describes how to send a SlackowWall Log"
 message="""
 To send a log from SlackowWall:
 - Make sure your game is open
@@ -48,7 +48,7 @@ A blank eye projector is usually caused by using retiNO mod, not using the Bound
 or not having Screen Recording permissions.
 
 Ensure you've done the following:
-- Disabled/not using retiNO mod
+- Disabled/not using retiNO mod (it doesn't show up under the book and quill)
 - Are using the [BoundlessWindow mod](<https://github.com/Slackow/BoundlessWindow/releases/latest>)
 - Have the "Remove Titlebar" option on in BoundlessWindow settings
 - Have Screen Recording permissions enabled for SlackowWall
@@ -59,7 +59,7 @@ For more details and alternatives to retiNO mod, read this \
 [document](<https://docs.google.com/document/d/1gD_ZZYFCEOJxImyfpUxLHGn702moP9I69-46fhWe9QM/edit?usp=sharing>)
 
 If you still have a blank eye projector, send a SlackowWall log file and tag Slackow.
-instructions for that can be found under `/slackowwalllog`
+instructions for that can be found under `/swlog`
 """
 
 [commands.sensitivity_scaling]
@@ -230,7 +230,7 @@ Personal worlds and maps should be safe as long as their **Folders** do not have
 description="Explains the significance of Prism vs MultiMC for macOS"
 message="""
 If you are using a Mac made after 2020, with an M series chip (e.g. M1, M2, etc) \
-then you should be using PrismLauncher instead of MultiMC.
+then you should be using [PrismLauncher](<https://prismlauncher.org/>) instead of MultiMC.
 This is because MultiMC only supports Intel Chips, while PrismLauncher supports ARM (apple chips) and Intel. \
 In practice, this means if you are using MultiMC, you are running an Intel Version of Java through a translation layer that makes it work on ARM. \
 This drastically reduces performance.
