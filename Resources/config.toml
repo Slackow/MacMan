@@ -17,10 +17,10 @@ description="Describes how to remove the requirement for pressing fn with F3"
 message="""
 In order to `F3 + C`, you cannot press `fn + F3 + C`, because `fn + C` is bound \
 to opening the control center. You can override this in a number of ways:
-- Turning on the macOS setting under `Keyboard > Keyboard Shortcuts... > Function Keys`
-- Using [Karabiner Elements](<https://karabiner-elements.pqrs.org/>), which is trickier \
-to setup but allows for more advanced rebinding options
-- Using [Fluor](<https://fluorapp.net/>), which simply changes the function row between \
+- Turning on the global macOS setting under `Keyboard > Keyboard Shortcuts... > Function Keys`
+- Using [Karabiner Elements](<https://karabiner-elements.pqrs.org/>), which known to break f3 hotkeys for some people, \
+but allows for more advanced rebinding options
+- Using [Fluor](<https://fluorapp.net/>), a menubar app which simply changes the function row between \
 function keys and action keys, depending on the app you're in. (Easier to setup)
 If you have a touchbar instead of physical keys, \
 follow the instructions under `/fn_f3_touchbar` instead
@@ -48,7 +48,7 @@ A blank eye projector is usually caused by using retiNO mod, not using the Bound
 or not having Screen Recording permissions.
 
 Ensure you've done the following:
-- Disabled/not using retiNO mod (it doesn't show up under the book and quill)
+- Disabled/not using retiNO mod (it has no settings, so it doesn't show up under the book and quill)
 - Are using the [BoundlessWindow mod](<https://github.com/Slackow/BoundlessWindow/releases/latest>)
 - Have the "Remove Titlebar" option on in BoundlessWindow settings
 - Have Screen Recording permissions enabled for SlackowWall
@@ -125,11 +125,11 @@ message="""
 - With your game open, press the red x that appears next to BoatEye sensitivity
 This should set your in-game sensitivity to the BoatEye sensitivity (~4%).
 You should not change your in-game sensitivity. (change the slider instead)
-Sensitivity Scaling makes your in-game sens feel like your normal sens, it only works *while SlackowWall is open*. \
+Sensitivity Scaling makes your in-game sens feel like your normal sens, it only works **while SlackowWall is open**. \
 You can use the toolbar icon or hotkey to toggle it on/off easier, and by default it will slow down your mouse in tall mode.
 
 run `/boateye_ninbot` for instructions on setting up NinjabrainBot
-run `/boateye_obs` for instructions on changing OBS
+run `/boateye_obs` for instructions on changing OBS if you use it
 run `/eyemeasuring` for instructions on measuring
 """
 
@@ -151,7 +151,7 @@ message="""
 - Press your "Reset" hotkey (your boat should turn green)
 
 run `/boateye` for instructions on setting up SlackowWall if you haven't already
-run `/boateye_obs` for instructions on changing OBS
+run `/boateye_obs` for instructions on changing OBS if you use it
 run `/eyemeasuring` for instructions on measuring
 You should be setup. (You don't need to calibrate NinjabrainBot if you use BoatEye)
 """
@@ -178,7 +178,7 @@ description="Describes how to measure your eye"
 message="""
 For when you have green boat and a sensitivity of `0.02291165`:
 make sure you have followed all steps in `/boateye`
-- If and only if you entered a boat during the run, and pressed a and d while in it: make sure you have entered and left a boat before measuring. \
+- If and only if you entered a boat during the run, and turned in it (by pressing a/d): make sure you have entered and left a boat before measuring. \
 (You do not have to record the angle, simply enter and leave it without pressing a/d, at any point before measuring.)
 - Throw your eye, making sure your server/client positions are not [desynced](<https://www.youtube.com/watch?v=uBqAeZMlEFQ>)
 - Line your mouse up to the eye, and enter 30 FOV.
@@ -204,10 +204,15 @@ If you are not seeing "Location copied to clipboard" when pressing `f3 + c`, and
 [commands.command_q]
 description="Describes how to unbind command + q for Minecraft"
 message="""
-You can unbind `⌘ + Q` for Minecraft specifically, so that you can use it to drop a full stack of items[.](https://cdn.discordapp.com/attachments/1115090281453322402/1430669408920932452/image.png?ex=6932a5f7&is=69315477&hm=dd152ef42617d60b0aab17b8da4d7e596d8bef554e43ff2d4c9928cec1b21c68&)
+You can unbind `⌘ + Q` for Minecraft specifically, so that you can use it to drop a full stack of items[.](https://cdn.discordapp.com/attachments/1115780015943061595/1461814418882039950/image.png?ex=696bec44&is=696a9ac4&hm=c8ba4eee7f11a23afe76c11aabf3c4237a46d202d0c5915f33670cc50d45e079&)
 The setting is under "Keyboard > Keyboard Shortcuts... > App Shortcuts", where you can add a shortcut called \
 "Quit java" (Case Sensitive) and set it to whatever you like (e.g. `^ + ⌥ + Q`)
-Older versions may require specialized names (<1.13)
+
+You can also unbind `⌘ + ⇧ + Q` by adding a shortcut named "Logout Username…" (where "Username" is your username as spelled in the menubar).
+Note that the ellipsis at the end is not three dots, but the unicode character "…" that you can type with `⌥ + ;` or copy from this message.
+This one may require you to logout or reboot to refresh the shortcut.
+
+Older versions (<1.13) may require specialized names (e.g. Quit "Prism Launcher: speedrun1.7")
 """
 
 [commands.update_mods]
@@ -258,4 +263,14 @@ Download BoundlessWindow from [GitHub](<https://github.com/Slackow/BoundlessWind
 
 BoundlessWindow allows you to resize your minecraft window larger than your monitor height, \
 which it is normally limited to.
+"""
+
+[commands.rebinding]
+description="Gives information about rebinding keys"
+message="""
+If you want to rebind keys and make a custom keyboard layout (usually for recipe book crafting) the recommended software is [Ukelele](https://software.sil.org/ukelele/)
+
+Ukelele allows you to make new keyboard layouts accessible under `System Settings > Keyboard > Input Sources`
+
+To rebind certain keys like backspace you need to use something like [Karabiner Elements](<https://karabiner-elements.pqrs.org/>) which translate key presses in other ways.
 """
