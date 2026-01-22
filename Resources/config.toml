@@ -257,11 +257,11 @@ SlackowWall is an MCSR utility app, similar to Jingle/Julti but for macOS.
 [commands.boundless_window]
 description="Links to boundless window mod"
 message="""
-Download BoundlessWindow from [GitHub](<https://github.com/Slackow/BoundlessWindow/releases/latest>), \
+Download BoundlessWindow Mod from [GitHub](<https://github.com/Slackow/BoundlessWindow/releases/latest>), \
 [ModCheck](<https://github.com/tildejustin/modcheck/releases/latest>), or \
 [mods.tildejustin.dev](<https://mods.tildejustin.dev>)
 
-BoundlessWindow allows you to resize your minecraft window larger than your monitor height, \
+BoundlessWindow Mod allows you to resize your minecraft window larger than your monitor height, \
 which it is normally limited to.
 """
 
