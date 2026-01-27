@@ -194,9 +194,12 @@ and pause buffer if necessary (pausing while holding f3)
 [commands.f3_c]
 description="Describes why f3+c may not be working"
 message="""
-If f3 + c isn't working, make sure:
-- NinjabrainBot has accessibility permissions granted
+If f3 + c isn't working but it shows up in chat, make sure:
+- NinjabrainBot has accessibility permissions granted (Usually shows up as "JavaLauncher")
 - You have the setting under "Advanced > Alternative Clipboard Reader" off
+- If your boat is blue, you need to record a boat angle first
+- Your boat is green if you are doing boateye, or not present/gray otherwise
+- You are looking up (looking down updates distance)
 If you are not seeing "Location copied to clipboard" when pressing `f3 + c`, and you're pressing \
 `fn + f3 + c`, consult `/fn_f3`
 """
