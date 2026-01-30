@@ -107,6 +107,16 @@ Here's my [source code](<https://github.com/Slackow/MacMan>)
 Have a Mac wonderful day!
 """
 
+[commands.color_of_boat]
+description="Describes what the different color boats mean"
+message="""
+- Gray Boat → Not currently doing boateye
+- Blue Boat → expecting boat angle measurement (entering a boat and pressing f3 + c)
+- Red Boat → Invalid boat angle measured (usually due to moving mouse or misconfiguration)
+- Green Boat → Ready to measure eye
+Eye Angles will only be recorded in either the Gray or Green boat state.
+"""
+
 [commands.boateye]
 description="Describes how to setup SlackowWall"
 message="""
@@ -197,7 +207,7 @@ message="""
 If f3 + c isn't working but it shows up in chat, make sure:
 - NinjabrainBot has accessibility permissions granted (Usually shows up as "JavaLauncher")
 - You have the setting under "Advanced > Alternative Clipboard Reader" off
-- If your boat is blue, you need to record a boat angle first
+- You measured a boat angle if you use blue boat
 - Your boat is green if you are doing boateye, or not present/gray otherwise
 - You are looking up (looking down updates distance)
 If you are not seeing "Location copied to clipboard" when pressing `f3 + c`, and you're pressing \
