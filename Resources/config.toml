@@ -278,6 +278,13 @@ BoundlessWindow Mod allows you to resize your minecraft window larger than your 
 which it is normally limited to.
 """
 
+[commands.toolscreen_mac]
+description="Not yet"
+message="""
+Nope.
+-# It's being looked into, but there's no timeline.
+"""
+
 [commands.rebinding]
 description="Gives information about rebinding keys"
 message="""
