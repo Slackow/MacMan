@@ -190,7 +190,7 @@ For when you have green boat and a sensitivity of `0.02291165`:
 make sure you have followed all steps in `/boateye`
 - If and only if you entered a boat during the run, and turned in it (by pressing a/d): make sure you have entered and left a boat before measuring. \
 (You do not have to record the angle, simply enter and leave it without pressing a/d, at any point before measuring.)
-- Throw your eye, making sure your server/client positions are not [desynced](<https://www.youtube.com/watch?v=uBqAeZMlEFQ>)
+- Throw your eye, making sure your server/client positions are not [desynced](<https://www.youtube.com/watch?v=uBqAeZMlEFQ>) < watch this
 - Line your mouse up to the eye, and enter 30 FOV.
 - Press your tall mode hotkey.
 - Move your mouse even closer to the boundary between the center of the eye[,]\
