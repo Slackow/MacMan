@@ -115,6 +115,19 @@ message="""
 - Red Boat → Invalid boat angle measured (usually due to moving mouse or misconfiguration)
 - Green Boat → Ready to measure eye
 Eye Angles will only be recorded in either the Gray or Green boat state.
+`/green_boat` explains the difference between starting with green boat and starting with blue boat
+"""
+
+[commands.green_boat]
+description="Explains Green Boat vs Blue Boat"
+message="""
+Green boat is similar to Blue boat, except that you do not need to measure your boat angle with `f3 + c`, and therefore \
+cannot get red boat by accidentally moving your mouse. You only need to enter a boat before measuring if you previously turned in a boat with a/d during the run (e.g while boating to a magma ravine)
+
+Blue boat works with 100+ mc sensitivities, while Green boat only works with 3 of them. \
+But this is a non-issue, thanks to sensitivity scaling being able to make any sensitivity feel like \
+any other sensitivity. (`0.02291165`, the default, is one of these values).
+Every sensitivity that works with Green boat also works with Blue boat.
 """
 
 [commands.boateye]
@@ -124,7 +137,7 @@ message="""
 - Download and install [SlackowWall](<https://github.com/Slackow/SlackowWall>), and [NinjabrainBot](<https://github.com/Ninjabrain1/Ninjabrain-Bot>)
 - Grant SlackowWall the necessary permissions (screen recording & accessibility)
 - Grant NinjabrainBot the necessary permissions (accessibility)
-- If not on macOS Sequoia (15) make sure you are *not* using the retiNO mod, and that you do have the [Boundless Window mod](<https://github.com/Slackow/BoundlessWindow/releases/latest>)
+- Add the [Boundless Window mod](<https://github.com/Slackow/BoundlessWindow/releases/latest>) to your instance (In PrismLauncher this is under `edit > Mods`
 - With BoundlessWindow, Minecraft will go onto your "Main display" so you may have to change that in display settings if you use an external display.
 - Make sure you have "Video Settings... > Fullscreen" off
 # In SlackowWall:
@@ -138,9 +151,9 @@ You should not change your in-game sensitivity. (change the slider instead)
 Sensitivity Scaling makes your in-game sens feel like your normal sens, it only works **while SlackowWall is open**. \
 You can use the toolbar icon or hotkey to toggle it on/off easier, and by default it will slow down your mouse in tall mode.
 
-run `/boateye_ninbot` for instructions on setting up NinjabrainBot
 run `/boateye_obs` for instructions on changing OBS if you use it
 run `/eyemeasuring` for instructions on measuring
+There is an updated video tutorial you can follow [here](https://www.youtube.com/watch?v=cf0Z2pRC39o)
 """
 
 [commands.boateye_ninbot]
@@ -281,7 +294,7 @@ which it is normally limited to.
 [commands.toolscreen_mac]
 description="Not yet"
 message="""
-Nope.
+Nope. The most similar tool is [SlackowWall](<https://github.com/Slackow/SlackowWall>).
 -# It's being looked into, but there's no timeline.
 """
 
