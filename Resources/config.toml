@@ -124,13 +124,15 @@ message="""
 Green boat is similar to Blue boat, except that you do not need to measure your boat angle with `f3 + c`, and therefore \
 cannot get red boat by accidentally moving your mouse. You only need to enter a boat before measuring if you previously turned in a boat with a/d during the run (e.g while boating to a magma ravine)
 
+In the case that you do not use a boat, make sure you are still accounting for server/client desync[.](https://www.youtube.com/watch?v=uBqAeZMlEFQ)
+
 Blue boat works with 100+ mc sensitivities, while Green boat only works with 3 of them. \
 But this is a non-issue, thanks to sensitivity scaling being able to make any sensitivity feel like \
 any other sensitivity. (`0.02291165`, the default, is one of these values).
 Every sensitivity that works with Green boat also works with Blue boat.
 """
 
-[commands.boateye]
+[commands.boateye_slackowwall]
 description="Describes how to setup SlackowWall"
 message="""
 # To setup BoatEye on macOS
@@ -151,9 +153,15 @@ You should not change your in-game sensitivity. (change the slider instead)
 Sensitivity Scaling makes your in-game sens feel like your normal sens, it only works **while SlackowWall is open**. \
 You can use the toolbar icon or hotkey to toggle it on/off easier, and by default it will slow down your mouse in tall mode.
 
+run `/boateye_ninbot` for instructions on how to setup Ninjabrain Bot
 run `/boateye_obs` for instructions on changing OBS if you use it
 run `/eyemeasuring` for instructions on measuring
-There is an updated video tutorial you can follow [here](https://www.youtube.com/watch?v=cf0Z2pRC39o)
+"""
+
+[commands.boateye]
+description="Links the current macOS Boateye Tutorial"
+message="""
+https://www.youtube.com/watch?v=cf0Z2pRC39o
 """
 
 [commands.boateye_ninbot]
@@ -173,7 +181,7 @@ message="""
 - Restart NinjabrainBot
 - Press your "Reset" hotkey (your boat should turn green)
 
-run `/boateye` for instructions on setting up SlackowWall if you haven't already
+run `/boateye_slackowwall` for instructions on setting up SlackowWall if you haven't already
 run `/boateye_obs` for instructions on changing OBS if you use it
 run `/eyemeasuring` for instructions on measuring
 You should be setup. (You don't need to calibrate NinjabrainBot if you use BoatEye)
