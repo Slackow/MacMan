@@ -253,8 +253,9 @@ Then click the "View Mods" option, and in that menu, press the button the update
 description="Describes how to clear your worlds"
 message="""
 In SlackowWall's Utility mode, there's an option called "Clear Worlds" underneath the arrow in the top right corner. \
-This will delete all but the 30 most recent worlds created with names like "New World, Random Speedrun etc." \
+This will delete all but the 40 most recent worlds created with names like "New World, Random Speedrun etc." \
 Personal worlds and maps should be safe as long as their **Folders** do not have these names.
+There is also a per-instance option for automatic world clearing under "Instance Settings".
 """
 
 [commands.multimc_to_prism]
