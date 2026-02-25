@@ -47,16 +47,22 @@ message="""
 A blank eye projector is usually caused by using retiNO mod, not using the BoundlessWindow mod, \
 or not having Screen Recording permissions.
 
-Ensure you've done the following:
+Ensure you've done all of the following:
 - Disabled/not using retiNO mod (it has no settings, so it doesn't show up under the book and quill)
 - Are using the [BoundlessWindow mod](<https://github.com/Slackow/BoundlessWindow/releases/latest>)
 - Have the "Remove Titlebar" option on in BoundlessWindow settings
 - Have Screen Recording permissions enabled for SlackowWall
-- If you previously set your tall height to `16384`, remove this override and allow it to default to avoid a crash.
+- If you previously set your tall height to `16384`, remove this override and allow it to default to avoid a crash. \
   (You should still use `16384` in Ninjabrain Bot, because your Minecraft resolution is different from your window size)
 
 For more details and alternatives to retiNO mod, read this \
 [document](<https://docs.google.com/document/d/1gD_ZZYFCEOJxImyfpUxLHGn702moP9I69-46fhWe9QM/edit?usp=sharing>)
+
+If it's still blank try restarting the screen sharing process by running this command in the terminal app:
+```bash
+killall -9 replayd
+```
+This will require you to restart SlackowWall and/or OBS.
 
 If you still have a blank eye projector, send a SlackowWall log file and tag Slackow.
 instructions for that can be found under `/swlog`
