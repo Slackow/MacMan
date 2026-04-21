@@ -1,7 +1,7 @@
 
 [commands.swlog]
-description="Describes how to send a SlackowWall Log"
-message="""
+description = "Describes how to send a SlackowWall Log"
+message = """
 To send a log from SlackowWall:
 - Make sure your game is open
 - Open SlackowWall Settings
@@ -13,8 +13,8 @@ as well as the mods you use, and any errors that may have occurred.
 """
 
 [commands.fn_f3]
-description="Describes how to remove the requirement for pressing fn with F3"
-message="""
+description = "Describes how to remove the requirement for pressing fn with F3"
+message = """
 In order to `F3 + C`, you cannot press `fn + F3 + C`, because `fn + C` is bound \
 to opening the control center. You can override this in a number of ways:
 - Turning on the global macOS setting under `Keyboard > Keyboard Shortcuts... > Function Keys`
@@ -27,8 +27,8 @@ follow the instructions under `/fn_f3_touchbar` instead
 """
 
 [commands.fn_f3_touchbar]
-description="Describes how to remove the requirement for pressing fn with F3 with a touchbar"
-message="""
+description = "Describes how to remove the requirement for pressing fn with F3 with a touchbar"
+message = """
 If you have a touchbar, you can do the following to show the function row while you're in Minecraft:
 
 - Open the "Terminal" app
@@ -42,8 +42,8 @@ you may be prompted for your password
 """
 
 [commands.blankprojector]
-description="Describes how to fix a blank eye projector in SlackowWall"
-message="""
+description = "Describes how to fix a blank eye projector in SlackowWall"
+message = """
 A blank eye projector is usually caused by using retiNO mod, not using the BoundlessWindow mod, \
 or not having Screen Recording permissions.
 
@@ -69,8 +69,8 @@ instructions for that can be found under `/swlog`
 """
 
 [commands.sensitivity_scaling]
-description="Describes what sensitivity scaling is"
-message="""
+description = "Describes what sensitivity scaling is"
+message = """
 BoatEye requires using specific sensitivities, and the sensitivities that work really well are \
 all small, (the most common of `0.02291165` is ~4%). Sensitivity Scaling allows you to translate your \
 "locked" mouse speed without affecting your regular mouse speed. So in practice you keep your minecraft sensitivity the same \
@@ -88,8 +88,8 @@ If you press the red x next to "BoatEye Sensitivity", it will automatically chan
 """
 
 [commands.tall_mode_crash]
-description="Describes the likely cause of a crash when entering tall mode"
-message="""
+description = "Describes the likely cause of a crash when entering tall mode"
+message = """
 If you manually set your tall mode height to 16384, you might experience a crash when resizing. \
 This is due to the difference between window size and minecraft resolution.
 
@@ -101,8 +101,8 @@ NinjabrainBot should still be set to use 16384, because it only cares about your
 """
 
 [commands.macman]
-description="Describes the Mac Man bot"
-message="""
+description = "Describes the Mac Man bot"
+message = """
 Yo, I'm Mac Man, created by Slackow.
 Most of my commands just relay information about common issues or troubleshooting guides on macOS, \
 related to speedrunning.
@@ -114,8 +114,8 @@ Have a Mac wonderful day!
 """
 
 [commands.color_of_boat]
-description="Describes what the different color boats mean"
-message="""
+description = "Describes what the different color boats mean"
+message = """
 - Gray Boat → Not currently doing boateye
 - Blue Boat → expecting boat angle measurement (entering a boat and pressing f3 + c)
 - Red Boat → Invalid boat angle measured (usually due to moving mouse or misconfiguration)
@@ -125,8 +125,8 @@ Eye Angles will only be recorded in either the Gray or Green boat state.
 """
 
 [commands.green_boat]
-description="Explains Green Boat vs Blue Boat"
-message="""
+description = "Explains Green Boat vs Blue Boat"
+message = """
 Green boat is similar to Blue boat, except that you do not need to measure your boat angle with `f3 + c`, and therefore \
 cannot get red boat by accidentally moving your mouse. You only need to enter a boat before measuring if you previously turned in a boat with a/d during the run (e.g while boating to a magma ravine)
 
@@ -139,8 +139,8 @@ Every sensitivity that works with Green boat also works with Blue boat.
 """
 
 [commands.boateye_slackowwall]
-description="Describes how to setup SlackowWall"
-message="""
+description = "Describes how to setup SlackowWall"
+message = """
 # To setup BoatEye on macOS
 - Download and install [SlackowWall](<https://github.com/Slackow/SlackowWall>), and [NinjabrainBot](<https://github.com/Ninjabrain1/Ninjabrain-Bot>)
 - Grant SlackowWall the necessary permissions (screen recording & accessibility)
@@ -165,14 +165,14 @@ run `/eyemeasuring` for instructions on measuring
 """
 
 [commands.boateye]
-description="Links the current macOS Boateye Tutorial"
-message="""
+description = "Links the current macOS Boateye Tutorial"
+message = """
 https://www.youtube.com/watch?v=RmAmL7JhGJw
 """
 
 [commands.boateye_ninbot]
-description="Describes how to setup Ninjabrain Bot for BoatEye"
-message="""
+description = "Describes how to setup Ninjabrain Bot for BoatEye"
+message = """
 # In NinjabrainBot:
 - Enter Settings, go under Hotkeys (it may appear blank the first time)
 - Configure the hotkeys for "Reset" and adjusting your angle +/-0.01, be mindful that the first one is +
@@ -194,8 +194,8 @@ You should be setup. (You don't need to calibrate NinjabrainBot if you use BoatE
 """
 
 [commands.boateye_obs]
-description="Describes how to setup your Minecraft source in OBS"
-message="""
+description = "Describes how to setup your Minecraft source in OBS"
+message = """
 For your game to show up properly in OBS:
 - Create/reuse a macOS screen capture, and set it to `Window Capture`
 - Select your game as the window (you can type "[j" in the dropdown to find it immediately)
@@ -211,8 +211,8 @@ You will have to reselect the window every time you restart your game
 """
 
 [commands.eyemeasuring]
-description="Describes how to measure your eye"
-message="""
+description = "Describes how to measure your eye"
+message = """
 For when you have green boat and a sensitivity of `0.02291165`:
 make sure you have followed all steps in `/boateye`
 - If and only if you entered a boat during the run, and turned in it (by pressing a/d): make sure you have entered and left a boat before measuring. \
@@ -229,8 +229,8 @@ and pause buffer if necessary (pausing while holding f3)
 """
 
 [commands.f3_c]
-description="Describes why f3+c may not be working"
-message="""
+description = "Describes why f3+c may not be working"
+message = """
 If f3 + c isn't working but it shows up in chat, make sure:
 - NinjabrainBot has accessibility permissions granted (Usually shows up as "JavaLauncher")
 - You have the setting under "Advanced > Alternative Clipboard Reader" off
@@ -242,8 +242,8 @@ If you are not seeing "Location copied to clipboard" when pressing `f3 + c`, and
 """
 
 [commands.command_q]
-description="Describes how to unbind command + q for Minecraft"
-message="""
+description = "Describes how to unbind command + q for Minecraft"
+message = """
 You can unbind `⌘ + Q` for Minecraft specifically, so that you can use it to drop a full stack of items[.](https://cdn.discordapp.com/attachments/1115780015943061595/1461814418882039950/image.png?ex=696bec44&is=696a9ac4&hm=c8ba4eee7f11a23afe76c11aabf3c4237a46d202d0c5915f33670cc50d45e079&)
 The setting is under "Keyboard > Keyboard Shortcuts... > App Shortcuts", where you can add a shortcut called \
 "Quit java" (Case Sensitive) and set it to whatever you like (e.g. `^ + ⌥ + Q`)
@@ -256,16 +256,16 @@ Older versions (<1.13) may require specialized names (e.g. Quit "Prism Launcher:
 """
 
 [commands.update_mods]
-description="Describes how to update your mods"
-message="""
+description = "Describes how to update your mods"
+message = """
 You can update your mods through [SlackowWall](<https://github.com/Slackow/SlackowWall>) or [ModCheck](<https://github.com/tildejustin/modcheck>)
 If you have SlackowWall, just make sure you are in utility mode, and click the arrow in the top right of your instance.
 Then click the "View Mods" option, and in that menu, press the button the update your mods. (This will close your game)
 """
 
 [commands.clear_worlds]
-description="Describes how to clear your worlds"
-message="""
+description = "Describes how to clear your worlds"
+message = """
 In SlackowWall's Utility mode, there's an option called "Clear Worlds" underneath the arrow in the top right corner. \
 This will delete all but the 40 most recent worlds created with names like "New World, Random Speedrun etc." \
 Personal worlds and maps should be safe as long as their **Folders** do not have these names.
@@ -273,8 +273,8 @@ There is also a per-instance option for automatic world clearing under "Instance
 """
 
 [commands.multimc_to_prism]
-description="Explains the significance of Prism vs MultiMC for macOS"
-message="""
+description = "Explains the significance of Prism vs MultiMC for macOS"
+message = """
 If you are using a Mac made after 2020, with an M series chip (e.g. M1, M2, etc) \
 then you should be using [PrismLauncher](<https://prismlauncher.org/>) instead of MultiMC.
 This is because MultiMC only supports Intel Chips, while PrismLauncher supports ARM (apple chips) and Intel. \
@@ -285,8 +285,8 @@ Prism is directly based on MultiMC and has all of its features (and more). In fa
 """
 
 [commands.slackowwall]
-description="Gets the download link to SlackowWall"
-message="""
+description = "Gets the download link to SlackowWall"
+message = """
 Download SlackowWall from [GitHub](https://github.com/Slackow/SlackowWall)
 If you have [Homebrew](<https://brew.sh>) you can run this:
 ```bash
@@ -296,8 +296,8 @@ SlackowWall is an MCSR utility app, similar to Jingle/Julti but for macOS.
 """
 
 [commands.boundless_window]
-description="Links to boundless window mod"
-message="""
+description = "Links to boundless window mod"
+message = """
 Download BoundlessWindow Mod from [GitHub](<https://github.com/Slackow/BoundlessWindow/releases/latest>), \
 [ModCheck](<https://github.com/tildejustin/modcheck/releases/latest>), or \
 [mods.tildejustin.dev](<https://mods.tildejustin.dev>)
@@ -307,18 +307,32 @@ which it is normally limited to.
 """
 
 [commands.toolscreen_mac]
-description="Not yet"
-message="""
+description = "Not yet"
+message = """
 Nope. The most similar tool is [SlackowWall](<https://github.com/Slackow/SlackowWall>).
--# It's being looked into, but there's no timeline.
+-# It's being worked on (tuxinjector, linuxscreen), but there's no timeline.
 """
 
 [commands.rebinding]
-description="Gives information about rebinding keys"
-message="""
+description = "Gives information about rebinding keys"
+message = """
 If you want to rebind keys and make a custom keyboard layout (usually for recipe book crafting) the recommended software is [Ukelele](https://software.sil.org/ukelele/)
 
 Ukelele allows you to make new keyboard layouts accessible under `System Settings > Keyboard > Input Sources`
 
 To rebind certain keys like backspace you need to use something like [Karabiner Elements](<https://karabiner-elements.pqrs.org/>) which translate key presses in other ways.
 """
+
+[commands.small_piechart]
+description = "Gives information about why pie chart can appear small"
+message = '''
+The pie chart appears small when the game uses 4k scaling, this is because the pie chart is not affected by gui scale, it renders at a fixed size.
+
+To get around this you have 3 options of varying effort:
+
+1. Get the retiNO mod, which disables 4k scaling for the game, but this lowers the maximum height you can use for boateye, so it negatively affects accuracy (you'll get 100% less often)
+2. Set your display to a LoDPI resolution instead of HiDPI: read through this [document](<https://docs.google.com/document/d/1gD_ZZYFCEOJxImyfpUxLHGn702moP9I69-46fhWe9QM/edit?tab=t.0#heading=h.3k0qq28sjncc>) on how to do that (this is also more performant than using retiNO mod.)
+3. Use the Pie Projector in SlackowWall `Utilities > Pie Projector > Enabled` (This only shows up while in thin or tall mode)
+
+If you're just checking for the existance of the spawner and don't need to read the numbers, you can also choose to deal with it ¯\_(ツ)_/¯ .
+'''
