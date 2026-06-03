@@ -20,7 +20,7 @@ to opening the control center. You can override this in a number of ways:
 - Turning on the global macOS setting under `Keyboard > Keyboard Shortcuts... > Function Keys`
 - Using [Karabiner Elements](<https://karabiner-elements.pqrs.org/>), which known to break f3 hotkeys for some people, \
 but allows for more advanced rebinding options
-- Using [Fluor](<https://fluorapp.net/>), a menubar app which simply changes the function row between \
+- Using [Fluor](<https://github.com/Pyroh/Fluor>), a menubar app which simply changes the function row between \
 function keys and action keys, depending on the app you're in. (Easier to setup)
 If you have a touchbar instead of physical keys, \
 follow the instructions under `/fn_f3_touchbar` instead
