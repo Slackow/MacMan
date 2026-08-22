@@ -248,7 +248,7 @@ You can unbind `⌘ + Q` for Minecraft specifically, so that you can use it to d
 The setting is under "Keyboard > Keyboard Shortcuts... > App Shortcuts", where you can add a shortcut called \
 "Quit java" (Case Sensitive) and set it to whatever you like (e.g. `^ + ⌥ + Q`)
 
-You can also unbind `⌘ + ⇧ + Q` by adding a shortcut named "Logout Username…" (where "Username" is your username as spelled in the menubar).
+You can also unbind `⌘ + ⇧ + Q` by adding a shortcut named "Log Out Username…" (where "Username" is your username as spelled in the menubar).
 Note that the ellipsis at the end is not three dots, but the unicode character "…" that you can type with `⌥ + ;` or copy from this message.
 This one may require you to logout or reboot to refresh the shortcut.
 
