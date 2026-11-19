@@ -187,6 +187,8 @@ message = """
 - Restart NinjabrainBot
 - Press your "Reset" hotkey (your boat should turn green)
 
+You may be able to skip most of these with the "Fix NinjabrainBot Settings" button in SlackowWall
+
 run `/boateye_slackowwall` for instructions on setting up SlackowWall if you haven't already
 run `/boateye_obs` for instructions on changing OBS if you use it
 run `/eyemeasuring` for instructions on measuring
@@ -200,9 +202,9 @@ For your game to show up properly in OBS:
 - Create/reuse a macOS screen capture, and set it to `Window Capture`
 - Select your game as the window (you can type "[j" in the dropdown to find it immediately)
 - Press "Ok", then press `⌘ + E` on the source
-- Set "Bounding Box Type" to `Scale to inner bounds`
-- Set "Alignment in Bounding Box" to `Center`
-- Set "Bounding Box Size" to your output resolution, e.g. `1920 x 1080`
+- Under "Bounds" Set the dropdown to `Fit`
+- Under "Bounds" Set "Alignment" to the center
+- Under "Bounds" Set "Width" and "Height" to your output resolution, e.g. `1920 x 1080`
 - Press "Close"
 - Optionally add an image source for NinjabrainBot, the path should appear in NinjabrainBot \
 under the "OBS overlay" section. You can use the `⌘ + ⇧ + G` shortcut in finder to make typing in the path easier
@@ -316,11 +318,12 @@ Nope. The most similar tool is [SlackowWall](<https://github.com/Slackow/Slackow
 [commands.rebinding]
 description = "Gives information about rebinding keys"
 message = """
-If you want to rebind keys and make a custom keyboard layout (usually for recipe book crafting) the recommended software is [Ukelele](https://software.sil.org/ukelele/)
+For recipe book rebinding the recommended software is [Ukelele](https://software.sil.org/ukelele/)
 
 Ukelele allows you to make new keyboard layouts accessible under `System Settings > Keyboard > Input Sources`
+This is independent of any "fixed" hotkeys, like number keys for piechart, or F for f3 + f
 
-To rebind certain keys like backspace you need to use something like [Karabiner Elements](<https://karabiner-elements.pqrs.org/>) which translate key presses in other ways.
+For more general rebinding of fixed hotkeys (like f3, or backspace) you have to use something like [Karabiner Elements](<https://karabiner-elements.pqrs.org/>) which translates key presses in other ways.
 """
 
 [commands.small_piechart]
@@ -335,4 +338,16 @@ To get around this you have 3 options of varying effort:
 3. Use the Pie Projector in SlackowWall `Utilities > Pie Projector > Enabled` (This only shows up while in thin or tall mode)
 
 If you're just checking for the existance of the spawner and don't need to read the numbers, you can also choose to deal with it ¯\_(ツ)_/¯ .
+'''
+
+[commands.keyrepeat]
+description = "Tells you how to max out keyrepeat"
+message = '''
+Running this terminal command allows you to max out the keyrepeat speed:
+```bash
+defaults write -g KeyRepeat -int 1
+```
+You may have to restart your computer for it to take effect
+
+"Delay until repeat" is findable in macOS System Settings > Keyboard > Delay until repeat
 '''
